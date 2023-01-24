@@ -3,80 +3,121 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-    <!-- FONTS -->
+    <title>webstudio</title>
+    <!-- fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" />
-    <!-- STYLE-NORMALIZATION -->
+    <!-- style-normalization -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-    <!-- CUSTOM STYLE -->
+    <!-- custom style -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-
   <body>
-    <!-- HEADER -->
     <header class="header">
-      <div class="container header-container">
-        <nav class="nav-menu">
-          <a class="logo logo-header" href="./index.html">
-            <span class="logo logo-accent animation-links">Web</span>Studio
-          </a>
-          <ul class="list nav-list">
-            <li class="nav-list-item">
-              <a class="nav-link animation-links" href="./index.html">Studio</a>
+      <div class="container">
+        <div class="menu-container">
+          <a class="menu-logo" href="./index.html"><span class="menu-logo-accent animation-links">Web</span>Studio</a>
+          <nav class="menu-navigation">
+            <ul class="menu-items">
+              <li class="menu-list">
+                <a class="menu-item animation-links" href="./index.html">Studio</a>
+              </li>
+              <li class="menu-list">
+                <a class="menu-item current animation-links" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="menu-list">
+                <a class="menu-item animation-links" href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="menu-contacts">
+            <li class="menu-contact">
+              <a class="menu-email animation-links" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
-            <li class="nav-list-item">
-              <a class="nav-link current animation-links" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-list-item">
-              <a class="nav-link animation-links" href="#">Contacts</a>
+            <li class="menu-contact">
+              <a class="menu-tel animation-links" href="tel:+11(000)1111111">+11 (000) 111-11-11</a>
             </li>
           </ul>
-        </nav>
-        <ul class="list contacts-list">
-          <li class="contacts-list-item">
-            <a class="contacts-link animation-links" href="mailto:info@devstudio.com">info@devstudio.com</a>
-          </li>
-          <li class="contacts-list-item">
-            <a class="contacts-link animation-links" href="tel:+11(000)1111111">+11 (000) 111-11-11</a>
-          </li>
-        </ul>
+          <button type="button" class="menu-btn  is-open js-open-menu" aria-expanded="false" data-menu>
+            <svg class="burger" width="40" height="40" aria-label="Mobile menu switcher">
+              <use class="icon-cross" href="./images/icons.svg#icon-close"></use>
+              <use class="icon-burger" href="./images/icons.svg#menu-btn"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-header js-menu-container">
+          <div class="menu__burger" id="mobile-menu">
+            <ul class="menu__burger-nav">
+              <li class="menu__burger-item"><a href="#" class="menu__burger-link">Studio</a></li>
+              <li class="menu__burger-item"><a href="./portfolio.html" class="menu__burger-link">Portfolio</a>
+              </li>
+              <li class="menu__burger-item"><a href="#" class="menu__burger-link">Contacts</a>
+              </li>
+            </ul>
+            <ul class="menu__burger-contacts">
+              <li class="menu__burger-contact"><a href="tel:+110001111111" class="menu__burger-tel">+11 (000) 111-11-11</a>
+                </li>
+              <li class="menu__burger-contact"><a href="mailto:info@devstudio.com" class="menu__burger-email">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="menu__burger-list">
+              <li><a href="#" class="menu__burger-icons">
+                <svg class="menu__burger-icon">
+                  <use href="./images/icons.svg#icon-social1-instagram"></use>
+                </svg></a>
+              </li>
+              <li><a href="#" class="menu__burger-icons">
+                <svg class="menu__burger-icon">
+                    <use href="./images/icons.svg#icon-social2-twitter"></use>
+                </svg></a>
+              </li>
+              <li><a href="#" class="menu__burger-icons">
+                <svg class="menu__burger-icon">
+                  <use href="./images/icons.svg#icon-social3-facebook"></use>
+                </svg></a>
+              </li>
+              <li><a href="#" class="menu__burger-icons">
+                <svg class="menu__burger-icon">
+                  <use href="./images/icons.svg#icon-social4-linkedin"></use>
+                </svg></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
-
     <main>
       <section class="portfolio-section section-bottom">
         <div class="portfolio-container container">
-          <!-- BUTTONS -->
-          <ul class="list portfolio-btn-list">
-            <li class="portfolio-btn-list-item">
-              <button class="btn portfolio-btn decor-btn animation-decor-btn" type="button">All</button>
-            </li>
-            <li class="portfolio-btn-list-item">
-              <button class="btn portfolio-btn animation-portfolio-btn" type="button">Web Site</button>
-            </li>
-            <li class="portfolio-btn-list-item">
-              <button class="btn portfolio-btn animation-portfolio-btn" type="button">App</button>
-            </li>
-            <li class="portfolio-btn-list-item">
-              <button class="btn portfolio-btn animation-portfolio-btn" type="button">Design</button>
-            </li>
-            <li class="portfolio-btn-list-item">
-              <button class="btn portfolio-btn animation-portfolio-btn" type="button">Marketing</button>
-            </li>
-          </ul>
-
-          <!-- CARDS -->
+          <div class="portfolio-btns-top">
+            <ul class="portfolio-btn-list">
+              <li class="portfolio-btn-list-item">
+                <button class="btn portfolio-btn decor-btn animation-decor-btn" type="button">All</button>
+              </li>
+              <li class="portfolio-btn-list-item">
+                <button class="btn portfolio-btn animation-portfolio-btn" type="button">Web Site</button>
+              </li>
+              <li class="portfolio-btn-list-item">
+                <button class="btn portfolio-btn animation-portfolio-btn" type="button">App</button>
+              </li>
+              <li class="portfolio-btn-list-item">
+                <button class="btn portfolio-btn animation-portfolio-btn" type="button">Design</button>
+              </li>
+              <li class="portfolio-btn-list-item">
+                <button class="btn portfolio-btn animation-portfolio-btn" type="button">Marketing</button>
+              </li>
+            </ul>
+          </div>
           <ul class="portfolio-cards-list">
             <li class="portfolio-cards-list-item">
               <a class="portfolio-card-link animation-portfolio-card-link" href="#">
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img1.jpg"
+                    src="./images/portfolio/portfolio-decor-img1.jpg"
                     alt="a photo representing banking app interface concept" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -94,7 +135,7 @@
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img2.jpg"
+                    src="./images/portfolio/portfolio-decor-img2.jpg"
                     alt="a photo representing cashless payment" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -112,7 +153,7 @@
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img3.jpg"
+                    src="./images/portfolio/portfolio-decor-img3.jpg"
                     alt="a photo representing meditaion app" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -130,7 +171,7 @@
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img4.jpg"
+                    src="./images/portfolio/portfolio-decor-img4.jpg"
                     alt="a photo representing taxi service" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -148,7 +189,7 @@
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img5.jpg"
+                    src="./images/portfolio/portfolio-decor-img5.jpg"
                     alt="a photo representing screen illustrations" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -166,7 +207,7 @@
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img6.jpg"
+                    src="./images/portfolio/portfolio-decor-img6.jpg"
                     alt="a photo representing online courses" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -184,7 +225,7 @@
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img7.jpg"
+                    src="./images/portfolio/portfolio-decor-img7.jpg"
                     alt="a photo representing instagram stories concept" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -202,7 +243,7 @@
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img8.jpg"
+                    src="./images/portfolio/portfolio-decor-img8.jpg"
                     alt="a photo representing organic food" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -220,7 +261,7 @@
                 <div class="portfolio-overlay-wrapper">
                   <img
                     width="360"
-                    src="./images/portfolio-decor-img9.jpg"
+                    src="./images/portfolio/portfolio-decor-img9.jpg"
                     alt="a photo representing fresh coffee" />
                     <div class="overlay animation-overlay">
                       <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App
@@ -237,11 +278,10 @@
         </div>
       </section>
     </main>
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container footer-wrapper">
-        <div class="footer-slogan-wrapper">
-          <a class="logo logo-footer" href="./index.html">
+    <footer class="footer-section">
+      <div class="container footer-container">
+        <div class="footer-slogan">
+          <a class="footer-logo" href="./index.html">
             <span class="logo-accent animation-links">Web</span>Studio
           </a>
           <p class="footer-text">
@@ -249,40 +289,40 @@
             growth solutions.
           </p>
         </div>
-        <div class="footer-social-wrappper">
-          <h2 class="footer-social-title">Social media</h2>
-          <ul class="footer-social-list list">
-            <li class="footer-social-list-item">
-              <a href="#" class="footer-social-list-link animation-social">
-                <svg class="footer-social-list-icon">
+        <div class="footer-social">
+          <h2 class="footer-title">Social media</h2>
+          <ul class="footer-media">
+            <li class="footer-list">
+              <a href="#" class="footer-icons animation-social">
+                <svg class="footer-icon">
                   <use href="./images/icons.svg#icon-social1-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-list-item">
-              <a href="#" class="footer-social-list-link animation-social">
-                <svg class="footer-social-list-icon">
+            <li class="footer-list">
+              <a href="#" class="footer-icons animation-social">
+                <svg class="footer-icon">
                   <use href="./images/icons.svg#icon-social2-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-list-item">
-              <a href="#" class="footer-social-list-link animation-social">
-                <svg class="footer-social-list-icon">
+            <li class="footer-list">
+              <a href="#" class="footer-icons animation-social">
+                <svg class="footer-icon">
                   <use href="./images/icons.svg#icon-social3-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-list-item">
-              <a href="#" class="footer-social-list-link animation-social">
-                <svg class="footer-social-list-icon">
+            <li class="footer-list">
+              <a href="#" class="footer-icons animation-social">
+                <svg class="footer-icon">
                   <use href="./images/icons.svg#icon-social4-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <form action="" class="footer-form">
+        <form action="#" class="footer-form">
           <h2 class="form-title">Subscribe</h2>
           <div class="form-all">
             <input type="email" name="email" id="email" class="form-input" placeholder="E-mail">
@@ -296,5 +336,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
